@@ -7,7 +7,3 @@ var Shape = /** @class */ (function () {
     return Shape;
 }());
 exports.Shape = Shape;
-// export abstract class Shape {
-//     abstract resize(percent): number
-//     abstract extend(percent: number) : number
-// }

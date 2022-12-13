@@ -11,10 +11,15 @@ export class Rectangle extends Shape
         this.length=length;
         this.width=width;
     }
+    getArea():number{
+        return this.length*this.width
+    }
     resize(percent): number
     {
-        return this.length*this.width * percent / 100
+        return this.getArea() * percent / 100
     }
 }
 let rectangle:Rectangle=new Rectangle(5,10)
-console.log(rectangle.resize(200))
+
+console.log("Diện tích trước khi tăng kích thước là: "+(rectangle.getArea()))
+console.log("Diện tích sau khi tăng kích thước là: "+ rectangle.resize(10))

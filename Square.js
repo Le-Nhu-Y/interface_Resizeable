@@ -25,11 +25,15 @@ var Square = /** @class */ (function (_super) {
         _this.side = side;
         return _this;
     }
+    Square.prototype.getArea = function () {
+        return this.side * this.side;
+    };
     Square.prototype.resize = function (percent) {
-        return this.side * percent / 100;
+        return this.getArea() * percent / 100;
     };
     return Square;
 }(Shape_1.Shape));
 exports.Square = Square;
 var square = new Square(10);
-console.log(square.resize(200));
+console.log("Diện tích trước khi tăng kích thước là: " + (square.getArea()));
+console.log("Diện tích sau khi tăng kích thước là: " + (square.resize(200)));

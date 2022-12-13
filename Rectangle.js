@@ -27,6 +27,9 @@ var Rectangle = /** @class */ (function (_super) {
         _this.width = width;
         return _this;
     }
+    Rectangle.prototype.getArea = function () {
+        return this.length * this.width;
+    };
     Rectangle.prototype.resize = function (percent) {
         return this.length * this.width * percent / 100;
     };
@@ -34,4 +37,5 @@ var Rectangle = /** @class */ (function (_super) {
 }(Shape_1.Shape));
 exports.Rectangle = Rectangle;
 var rectangle = new Rectangle(5, 10);
-console.log(rectangle.resize(200));
+console.log("Diện tích trước khi tăng kích thước là: " + (rectangle.getArea()));
+console.log("Diện tích sau khi tăng kích thước là: " + rectangle.resize(10));

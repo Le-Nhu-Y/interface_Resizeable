@@ -25,6 +25,9 @@ var Circle = /** @class */ (function (_super) {
         _this.radius = radius;
         return _this;
     }
+    Circle.prototype.getArea = function () {
+        return Math.PI * this.radius * this.radius;
+    };
     Circle.prototype.resize = function (percent) {
         return this.radius * percent / 100;
     };
@@ -32,29 +35,5 @@ var Circle = /** @class */ (function (_super) {
 }(Shape_1.Shape));
 exports.Circle = Circle;
 var circle = new Circle(10);
-console.log(circle.resize(100));
-// import {Shape} from "./Shape";
-// export  class Circle extends Shape
-// {
-//     x : number;
-//     y : number;
-//     radius : number
-//
-//     constructor(x: number, y: number, radius: number) {
-//         super()
-//         this.x = x;
-//         this.y = y;
-//         this.radius = radius;
-//     }
-//
-//     resize(percent ):number{
-//          return (this.radius * percent)/100
-//      };
-//     extend(percent: number): number {
-//         return this.radius * percent
-//     }
-// }
-//
-// let circle = new Circle(10,10,100)
-// console.log(circle.resize(10));
-// console.log(circle.extend(10));
+console.log("Diện tích trước khi tăng kích thước là: " + (circle.getArea()));
+console.log("Diện tích sau khi tăng kích thước là: " + circle.resize(10));
